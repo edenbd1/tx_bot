@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package torii;
+
+service Torii {
+    rpc subscribe (SubscribeRequest) returns (stream Entity);
+}
+
+message SubscribeRequest {
+    string world_address = 1;
+}
+
+message Entity {
+    string key = 1;
+    map<string, bytes> models = 2;
+}

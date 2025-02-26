@@ -1,0 +1,109 @@
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "start_game",
+      "inputs": [
+        {"name": "game_id", "type": "u32"},
+        {"name": "players", "type": "Span<ContractAddress>"}
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "vote",
+      "inputs": [
+        {"name": "game_id", "type": "u32"},
+        {"name": "target", "type": "ContractAddress"}
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "night_action",
+      "inputs": [
+        {"name": "game_id", "type": "u32"},
+        {"name": "target", "type": "ContractAddress"}
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "cupid_action",
+      "inputs": [
+        {"name": "game_id", "type": "u32"},
+        {"name": "lover1", "type": "ContractAddress"},
+        {"name": "lover2", "type": "ContractAddress"}
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "end_voting",
+      "inputs": [
+        {"name": "game_id", "type": "u32"}
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "kill_player",
+      "inputs": [
+        {"name": "game_id", "type": "u32"},
+        {"name": "target", "type": "ContractAddress"},
+        {"name": "from_voting", "type": "bool"}
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "hunter_action",
+      "inputs": [
+        {"name": "game_id", "type": "u32"},
+        {"name": "target", "type": "ContractAddress"}
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "witch_action",
+      "inputs": [
+        {"name": "game_id", "type": "u32"},
+        {"name": "target", "type": "ContractAddress"},
+        {"name": "is_life_potion", "type": "bool"}
+      ],
+      "outputs": []
+    },
+    {
+      "type": "event",
+      "name": "PlayerEliminated",
+      "keys": [
+        {"name": "game_id", "type": "u32"}
+      ],
+      "data": [
+        {"name": "player", "type": "ContractAddress"}
+      ]
+    },
+    {
+      "type": "event",
+      "name": "GameStarted",
+      "keys": [
+        {"name": "game_id", "type": "u32"}
+      ],
+      "data": [
+        {"name": "player_count", "type": "u8"}
+      ]
+    },
+    {
+      "type": "event",
+      "name": "LoversPaired",
+      "keys": [
+        {"name": "game_id", "type": "u32"}
+      ],
+      "data": [
+        {"name": "lover1", "type": "ContractAddress"},
+        {"name": "lover2", "type": "ContractAddress"}
+      ]
+    }
+  ]
+}
